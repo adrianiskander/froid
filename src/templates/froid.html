@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+
+{% block body %}{% raw %}
+<div id="app">
+
+  <nav class="navbar flex-center animated fadeInDown faster">
+    <div class="container">
+      <div></div>
+      <a class="btn btn-danger" href="/">END</a>
+    </div>
+  </nav>
+
+  <section class="chat-messages-section">
+    <div class="container">
+      <ul class="chat-messages-list">
+        <li class="chat-message animated fadeInUp faster" v-for="message in messages">
+          {{ message }}
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="chat-form flex-center animated fadeInUp faster">
+    <div class="container">
+      <form class="flex-col flex-justify-end" method="POST" v-on:submit="submitMessage" ref="messageForm">
+        <formset class="flex-col">
+          <div class="mr-3 w-100">
+            <textarea class="form-control mb-2" name="message" minlength="2" maxlength="256" autocomplete="off" style="height: 65px;"></textarea>
+          </div>
+          <button class="btn btn-success flex-align-self-end" type="submit">SUBMIT</button>
+        </formset>
+      </form>
+    </div>
+  </section>
+
+</div>
+{% endraw %}{% endblock %}
+
+
+{% block bodybottom %}
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+  <script type="text/javascript" src="./static/js/froid_vue.js"></script>
+{% endblock %}

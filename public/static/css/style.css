@@ -1,0 +1,96 @@
+@import url('./Front.css');
+
+body {
+  background-image: url('../assets/img/froid_front.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  font-family: 'Open Sans', sans-serif;
+  margin: 0px;
+}
+
+.btn {
+  border-radius: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.chat-form {
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 130px;
+}
+
+.chat-message {
+  background-color: white;
+  border-radius: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  user-select: none;
+}
+
+.chat-messages-list {
+  list-style-type: none;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 15px;
+  padding-top: 15px;
+}
+
+.chat-messages-list li:last-child {
+  margin: 0px !important;
+}
+
+.chat-messages-section {
+  margin-bottom: 150px;
+  margin-top: 50px;
+}
+
+[class*='flex-'] { display: flex; }
+
+.flex-center {
+  align-items: center;
+  justify-content: center;
+}
+
+.flex-col { flex-direction: column; }
+.flex-row { flex-direction: row; }
+
+.flex-align-self-center { align-self: center; }
+.flex-align-self-end { align-self: flex-end; }
+.flex-align-self-start { align-self: flex-start; }
+.flex-justify-end { justify-content: flex-end; }
+.list-style-none { list-style-type: none; }
+
+.form-control {
+  border-radius: 15px;
+  padding: 10px 15px 10px 15px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  background-color: rgba(0,0,0,0.5);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 50px;
+  padding: 0px;
+  z-index: 10;
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 75%;
+  }
+}
+
+.user-select-none { user-select: none; }

@@ -1,0 +1,8 @@
+*.log
+*.rc
+*.sqlite3
+__pycache__
+assets
+confsec.*
+temp
+tmp

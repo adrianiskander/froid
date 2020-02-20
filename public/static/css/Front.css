@@ -1,0 +1,78 @@
+.Front {
+  height: 100vh;
+  width: 100%;
+}
+
+.Front-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+}
+
+.Front-header-description {
+  color: white;
+  font-size: 1rem;
+  margin-bottom: 20px;
+  margin-top: 30px;
+}
+
+.Front-header-subtitle {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+.Front-header-title {
+  font-size: 3rem;
+  text-indent: -0.2rem;
+}
+
+.Front-form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (orientation: portrait) {
+  .Front-header {
+    height: 75vh;
+  }
+}
+
+@media (orientation: landscape) {
+  .Front-header {
+    height: 100vh;
+  }
+}
+
+@media (min-width: 768px) {
+  .Front-form {
+    width: 50%;
+  }
+
+  .Front-header-description {
+    width: 50%;
+  }
+
+  .Front-header-title {
+    font-size: 5rem;
+    text-indent: -0.4rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .Front-header {
+    height: 75vh;
+  }
+}
+
+@media (min-width: 1600px) {
+  .Front-form {
+    width: 33.33%;
+  }
+
+  .Front-header-description {
+    width: 33.33%;
+  }
+}
