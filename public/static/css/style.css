@@ -1,7 +1,7 @@
 @import url('./Front.css');
 
 body {
-  background-image: url('../assets/img/froid_front.jpg');
+  background-image: url('../assets/images/froid_front.jpg');
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

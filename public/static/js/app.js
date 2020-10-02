@@ -1,6 +1,11 @@
 'use strict';
 
 
+function hide(elem) {
+  elem.classList.add('d-none')
+}
+
+
 let config = {
   apiUrl: '/api'
 };
