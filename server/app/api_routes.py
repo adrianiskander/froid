@@ -1,16 +1,6 @@
-from flask import redirect, request
+from flask import request
 
-from . import app, config, froid, utils
-
-
-@app.route('/')
-def index():
-    """
-        Render home view.
-    """
-    if config.DEBUG:
-        return utils.load_file(config.INDEX_HTML_URI) 
-    return INDEX_HTML
+from . import app, froid
 
 
 @app.route('/api/greeting')
@@ -39,12 +29,3 @@ def stimulus():
     stim = request.data.decode()
     res = froid.handle_stimulus(stim)
     return res, 200
-
-
-@app.route('/', defaults={'path':''})
-@app.route('/<path:path>')
-def redirect_404(path):
-    """
-        Redirect all routes to index route.
-    """
-    return redirect('/')
