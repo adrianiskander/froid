@@ -1,7 +1,7 @@
 import sys
 
-from src import run_selenium
-from src.wsgi import application as app
+from app import run_selenium
+from app.wsgi import application as app
 
 
 COMMANDS = {
