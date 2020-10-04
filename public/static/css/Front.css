@@ -7,6 +7,10 @@
   width: 100%;
 
   background-image: url('../assets/images/froid_front.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   z-index: 100;
 }
 
