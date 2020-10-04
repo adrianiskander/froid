@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="FROID is conversation agent that learns from user input. Start conversation now.">
+
+  <title>FROID - Self Learning Chatbot</title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="./static/css/style.css">
+</head>
+<body>
+
+  <section id="front" class="Front">
+    <header class="Front-header">
+      <div class="container flex-col">
+        
+        <h1 class="flex-col text-white">
+          <span class="Front-header-title"><strong>FROID</strong></span>
+          <span class="d-none">&nbsp;-&nbsp;</span>
+          <span class="Front-header-subtitle"><strong>Freaky Droid</strong></span>
+        </h1>
+        
+        <h2 class="Front-header-description">FROID is self learning chatbot that learns from what you write to him. Talk&nbsp;with Froid and have fun! Start conversation now.</h2>
+
+        <div class="flex-col flex-justify-start mt-3">
+          <button class="flex-align-self-start btn btn-warning mb-3" onclick="hideFront();">
+            <b>START&nbsp;CONVERSATION</b>
+          </button>
+          <a class="flex-align-self-start mt-3 text-white user-select-none" href="https://www.freepik.com/starline">Background by starline / Freepik</a>
+        </div>
+      </div>
+    </header>
+  </section>
+
+  <div class="d-none" id="app">
+    <nav class="navbar flex-center animated fadeInDown faster">
+      <div class="container">
+        <div></div>
+        <button class="btn btn-danger text-light" onClick="showFront();">END</button>
+      </div>
+    </nav>
+
+    <section class="chat-messages-section">
+      <div class="container">
+        <ul class="chat-messages-list">
+          <li class="chat-message animated fadeInUp faster" v-for="message in messages">
+            {{ message }}
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="chat-form flex-center animated fadeInUp faster">
+      <div class="container">
+        <form class="flex-col flex-justify-end" method="POST" v-on:submit="submitMessage" ref="messageForm">
+          <formset class="flex-col">
+            <div class="mr-3 w-100">
+              <textarea class="form-control mb-2" name="message" minlength="2" maxlength="256" autocomplete="off" style="height: 65px;"></textarea>
+            </div>
+            <button class="btn btn-success flex-align-self-end" type="submit">SUBMIT</button>
+          </formset>
+        </form>
+      </div>
+    </section>
+  </div>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.12/vue.min.js"></script>
+  <script type="text/javascript" src="./static/js/app.js"></script>
+</body>
+</html>
