@@ -1,22 +1,6 @@
-from flask import redirect, render_template, request
-from .extensions import app, froid
-from .settings import config
+from flask import request
 
-
-@app.route('/')
-def index():
-    """
-        Render home view.
-    """
-    return render_template('index.html')
-
-
-@app.route('/froid')
-def froid_route():
-    """
-        Render chat view.
-    """
-    return render_template('froid.html')
+from . import app, froid
 
 
 @app.route('/api/greeting')
@@ -45,12 +29,3 @@ def stimulus():
     stim = request.data.decode()
     res = froid.handle_stimulus(stim)
     return res, 200
-
-
-@app.route('/', defaults={'path':''})
-@app.route('/<path:path>')
-def redirect_all(path):
-    """
-        Redirect all routes to index route.
-    """
-    return redirect('/')

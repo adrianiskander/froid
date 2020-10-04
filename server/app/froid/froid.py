@@ -193,6 +193,12 @@ def run_selenium():
         driver = webdriver.Firefox()
 
         driver.get(CLEVERBOT_URL)
+        
+        # Find and close welcome prompt.
+        note_prompt = driver.find_element_by_id('note')
+        note_prompt = note_prompt.find_element_by_tag_name('input')
+        note_prompt.click()
+
         stimulus_input = driver.find_element_by_class_name('stimulus')
         stimulus_input.send_keys(get_random_greeting())
         stimulus_input.send_keys(Keys.ENTER)
