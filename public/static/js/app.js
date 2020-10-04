@@ -1,9 +1,17 @@
 'use strict';
 
 
-function hide(elem) {
-  elem.classList.add('d-none')
-}
+function hideFront() {
+  document.getElementById('front').classList.add('d-none');
+  document.getElementById('app').classList.remove('d-none');
+};
+
+
+function showFront() {
+  document.getElementById('app').classList.add('d-none');
+  document.getElementById('front').classList.remove('d-none');
+  app.messages = [];
+};
 
 
 let config = {
